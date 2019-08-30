@@ -1,0 +1,7 @@
+.home header {
+  text-align: center;
+}
+.home .container {
+  max-width: 880px;
+  margin: auto;
+}
