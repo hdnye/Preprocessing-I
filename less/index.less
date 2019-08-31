@@ -1,4 +1,5 @@
-
+@import 'variables.less';
+@import 'mixins.less';
 
 * {
 	box-sizing: border-box;
@@ -6,9 +7,7 @@
 	margin: o;
 	max-width: 100%;
 	
-	 
-	
-  }
+ }
 
   //<----General Styles---->//
   
@@ -41,9 +40,7 @@
 	}
  		
 	nav {
-		display: flex;
-		justify-content: center;
-		align-items: space-between;
+		
 		padding-bottom: 2%;
 	}
 
@@ -59,19 +56,29 @@
 	.links {
 		width: 80%;
 		display: flex;
-		justify-content: space-evenly;
-		text-decoration: none;
+		justify-content: space-around;
 		font-size: 1.1rem;
-	}
 
+		@media @mobile {
+			display: flex;
+			flex-direction: column wrap;
+			border-bottom: 1px solid black;
+
+		.links:last-child {
+			border-top: 1px solid black;
+			}
+		}
+	}	
 //  <----About Me---->  //
 
 #about {
 
 	background-color: darkgrey;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	.display(center);
+
+	@media @mobile {
+		background-color: none;
+	}
 	
 }
 
@@ -81,6 +88,9 @@
 	background-color: lightgray;
 	width: 60%;
 	
+	@media @mobile {
+		width: 90%;
+	}
 }
 
 // <-----Skills.....> //
@@ -91,16 +101,23 @@
 }
 
 .skills-container {
-	display: flex;
-	justify-content: space-around;
+	.display(space-around; center);
 	text-align: center;
-	border: 1px solid black;
 	background-color: gainsboro;
+
+	@media @mobile {
+		flex-direction: column;
+		width: 90%;
+	}
 }	
 
 .skills-containter div {
 	width: 20%;
-	
+	border: 1px solid black;
+
+	@media @mobile {
+		width: 90%;
+	}
 }
 
 //  <-----Education----> //
@@ -115,13 +132,14 @@
 }
 
  ul {
-	 display: flex;
+	 .display(space-around; center);
 	 flex-direction: row;
-	 justify-content: space-around;
-	 align-items: center;
+	 
+	 @media @mobile {
+		flex-direction: column;
+		width: 90%;
+	}
 }
-
-
 li  {
 	padding-top: 10px;
 	line-height: 30px;
