@@ -1,59 +1,184 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import 'variables.less';
+@import 'mixins.less';
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: o;
+	max-width: 100%;
+	
+ }
+
+  //<----General Styles---->//
+  
+  
+  html, body {
+	font-family: 'Barlow', sans-serif;
+	background-image: url('../img/hallway.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5 {
+	font-family: 'Montserrat', 'monospace';
+	text-align: center;
+  }
+   
+  section {
+	  padding: 4% 0;
+  }
+
+ 
+
+//<----Header---> //
+	
+	#home {
+		
+		padding: 2% 0;
+		
+	}
+ 		
+	nav {
+		
+		padding-bottom: 2%;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+		&:hover {
+			color: white;
+			
+		}
+		
 }
 
-html, body {
-    height: 100%;
+	#home h2 {
+		@media (@mobile) {
+			font-size: 1rem;
+		}
+	}
+	.links {
+		width: 80%;
+		display: flex;
+		justify-content: space-around;
+		margin: auto;
+		font-size: 1.1rem;
+
+		@media (@mobile) {
+			display: flex;
+			flex-flow: column-reverse wrap;
+			align-content: center;
+			margin: auto;
+			}
+		}
+	.links a {
+		@media (@mobile) {
+			border-bottom: 1px solid black;
+			width: 100%;
+			text-align: center;
+			padding: 2% 0;
+
+		}
+}			
+//  <----About Me---->  //
+
+#about {
+
+	background-color: darkgrey;
+	.display(center; center);
+
 }
+
+#about p {
+	text-align: justify;
+}	
+
+#about div {
+	background-color: lightgray;
+	width: 60%;
+	
+	@media (@mobile) {
+		
+		width: 100%;
+	}
+	@media (@tablet) {
+		width: 100%;
+	}
+}
+
+// <-----Skills.....> //
+
+#skills {
+	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+
+.skills-container {
+	.display(space-around; center);
+	text-align: center;
+	background-color: gainsboro;
+	
+	@media (@mobile)  {
+		flex-direction: column;
+		width: 100%;
+	}
+	@media  (@tablet) {
+		flex-direction: column;
+	}
+}	
+
+.skills-containter div {
+	width: 20%;
+	border: 1px solid black;
+	
+	@media (@mobile) {
+		width: 90%;
+	}
+}
+
+//  <-----Education----> //
+
+ #edu {
+	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+ }
+
+.edu-list {
+	border: 1px solid black;
+	background-color: gainsboro; 
+			
+}
+
+ ul {
+	 .display(space-around; center);
+	 flex-direction: row;
+	
+	 @media (@mobile) {
+		flex-direction: column;
+		text-align: center;
+		width: 90%;
+	}
+}
+
+li  {
+	padding-top: 10px;
+	line-height: 30px;
+	list-style-type: round;
+	list-style-position: inside;
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
