@@ -1,8 +1,8 @@
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: o;
-  max-width: 100%;
+  margin: auto;
+  max-width: 90%;
 }
 html,
 body {
@@ -27,7 +27,7 @@ section {
   padding: 2% 0;
 }
 nav {
-  padding-bottom: 2%;
+  padding-bottom: 4%;
 }
 a {
   text-decoration: none;
@@ -72,10 +72,11 @@ a:hover {
 }
 #about p {
   text-align: justify;
+  padding: 1%;
 }
 #about div {
   background-color: lightgray;
-  width: 60%;
+  width: 80%;
 }
 @media (max-width: 500px) {
   #about div {
